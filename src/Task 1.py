@@ -1,6 +1,6 @@
 import csv
 import gensim.downloader as api
-from gensim.models import Word2Vec
+
 
 wv = api.load('word2vec-google-news-300')
 
@@ -63,7 +63,7 @@ with open('analysis.csv', 'w', newline='') as analysis_file:
     analysis_writer = csv.writer(analysis_file)
 
     vocab = wv.index_to_key
-    accuracy = total_correct/total_answered
+    accuracy = total_correct / total_answered
 
     row = []
     row.append("word2vec-google-news-300")
@@ -73,7 +73,6 @@ with open('analysis.csv', 'w', newline='') as analysis_file:
     row.append(total_answered)
     row.append(accuracy)
     analysis_writer.writerow(row)
-
 
 synonyms_csv.close()
 output_file.close()
