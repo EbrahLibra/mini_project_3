@@ -58,17 +58,10 @@ def generate_details_and_analysis(corpos):
     analysis_file.close()
 
 
-corporas = ['conceptnet-numberbatch-17-06-300',
-            'fasttext-wiki-news-subwords-300',
-            'glove-twitter-100',
-            'glove-twitter-200',
+corporas = ['fasttext-wiki-news-subwords-300',
             'glove-twitter-25',
             'glove-twitter-50',
-            'glove-wiki-gigaword-100',
-            'glove-wiki-gigaword-200',
-            'glove-wiki-gigaword-300',
-            'glove-wiki-gigaword-50',
-            'word2vec-ruscorpora-300']
+            'glove-wiki-gigaword-300']
 
 for corpora in corporas:
     generate_details_and_analysis(corpora)
